@@ -4,3 +4,49 @@ html{
     font-size: 10px;
 }
 $font-size-base: 1.6rem;
+
+$body-color: #1e1e1e;
+$grid-gutter-width: 1.2rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  xm: 450px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  //xxl: 1400px
+);
+
+$container-max-widths: (
+  //sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  //xxl: 1320px
+);
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 2,
+  2: $spacer,
+  3: $spacer *1.5,
+  4: $spacer * 2,
+  5: $spacer * 2.5,
+  6: $spacer * 3,
+  7: $spacer *3.5,
+  8: $spacer * 4,
+  9: $spacer * 4.5,
+  10: $spacer * 5,
+  11: $spacer *5.5,
+  12: $spacer * 6,
+  13: $spacer * 6.5,
+  14: $spacer * 7,
+  15: $spacer *7.5,
+  16: $spacer * 8,
+  17: $spacer * 8.5,
+  18: $spacer * 9,
+  17: $spacer * 9.5,
+  18: $spacer * 10,
+);
