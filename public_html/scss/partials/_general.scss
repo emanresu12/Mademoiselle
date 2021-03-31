@@ -1,7 +1,7 @@
 
 $body-font:$lato;
-$headings-font: $Bodoni
-$afterline-color: #ECD9D9;
+$headings-font: $bodoni;
+
 
 img{
     max-width: 100%;
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6{
 
 .section-title:after{
     content:'';
-    color: 1px solid $afterline-color;
+    color: 1px solid #ECD9D9;
     
 }
 

@@ -1,3 +1,4 @@
+$black: #ccc;
 
 
 html{
@@ -47,6 +48,10 @@ $spacers: (
   16: $spacer * 8,
   17: $spacer * 8.5,
   18: $spacer * 9,
-  17: $spacer * 9.5,
-  18: $spacer * 10,
+  19: $spacer * 9.5,
+  20: $spacer * 10,
 );
+
+$navbar-light-color: #1e1e1e;            
+$navbar-light-hover-color: $black;
+$navbar-light-active-color: $black;
