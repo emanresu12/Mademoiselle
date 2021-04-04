@@ -260,11 +260,11 @@ sup { top: -.5em; }
 
 a {
   color: $link-color;
-  text-decoration: $link-decoration;
+  text-decoration: $link-hover-decoration;
 
   &:hover {
     color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    text-decoration: $link-decoration;
   }
 }
 

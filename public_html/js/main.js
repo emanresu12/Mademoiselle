@@ -1,88 +1,113 @@
 $(document).ready(function () {
 
-
-
-
-// animation start
-    function animation() {
-        var windowHight = $(window).height();
-        var scroll = $(window).scrollTop();
-        $('.animation').each(function () {
-            var pozicija = $(this).offset().top;
-            var animacija = $(this).attr('data-animation');
-            var delay = $(this).attr('data-delay');
-            if (pozicija < scroll + windowHight - 50) {
-                $(this).css('animation-delay', delay);
-                $(this).addClass(animacija);
-            }
-        });
+    function checkHeader() {
+        let headerHeight = $('header').innerHeight();
+        $('main').css('margin-top', headerHeight);
     }
-
-
-
-    animation();
-    $(window).scroll(function () {
-        animation();
+    checkHeader();
+    $(window).resize(function () {
+        checkHeader();
     });
-// animation end
+});
+function animation() {
+    var windowHeight = $(window).height();
+    var scroll = $(window).scrollTop();
+    $('.animation').each(function () {
+        let position = $(this).offset().top;
+        let animation = $(this).attr('data-animation');
+        let delay = $(this).attr('data-delay');
+        if (position < scroll + windowHeight - 100) {
+            $(this).css('animation-delay', delay);
+            $(this).addClass(animation);
+        }
+    });
+}
+animation();
+$(window).scroll(function () {
+    animation();
+    animateHeader();
+});
+if ($('.blog-slider').length > 0) {
+    $('.blog-slider').owlCarousel({
+        autoplay: true,
+        loop: true,
+        items: 1
+
+    });
+}
 
 
+if ($('.contact-form').length > 0) {
 
+//FORM VALIDATION
+    $(function () {
+        $(".contact-form").validate({
+            highlight: function (element) {
+                $(element).addClass("is-invalid").removeClass("is-valid");
+            },
+            unhighlight: function (element) {
+                $(element).removeClass('is-invalid').addClass('is-valid');
+            },
+            rules: {
+                name: {
+                    required: true
 
-    if ($('.contact-form').length > 0) {
-        $(function () {
-            $(".contact-form").validate({
-                highlight: function (element) {
-                    $(element).addClass("is-invalid").removeClass("is-valid");
-                    $(element).closest('.form-group').addClass("is-invalid").removeClass("is-valid");
                 },
-                unhighlight: function (element) {
-                    $(element).removeClass('is-invalid').addClass('is-valid');
-                    $(element).closest('.form-group').addClass("is-valid").removeClass("is-invalid");
+                email: {
+                    required: true,
+                    email: true
                 },
-                rules: {
-                    name: {
-                        required: true
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    message: {
-                        required: true,
-                        maxlength: 255
-
-                    }
+                subject: {
+                    required: true
                 },
-                messages: {
-                    name: {
-                        required: 'Name* is required field!!!'
-                    },
-                    email: {
-                        required: 'Email* is required field!!!',
-                        email: 'Please insert valid Email address!!!'
-                    },
-                    message: {
-                        required: 'Message* is required field!!!',
-                        maxlength: 'Max Message length is 255 characters !!!'
-
-                    }
-
-                },
-                errorElement: 'p',
-                errorPlacement: function (error, element) {
-                    error.appendTo($(element).closest('.form-group').find('.invalid-feedback'));
+                message: {
+                    required: true
                 }
 
-            });
+
+            },
+            messages: {
+                name: {
+                    required: "Field is reguired"
+
+                },
+                email: {
+                    required: "Field is reguired",
+                    email: "Please enter a valid email adress"
+                },
+                subject: {
+                    required: "Field is reguired"
+                },
+                message: {
+                    required: " Field is reguired"
+                }
+
+            },
+            errorElement: 'p',
+            errorPlacement: function (error, element) {
+                error.appendTo($(element).closest('.form-group').find('.invalid-feedback'));
+            }
+
         });
-    }//Form Validation
+    });
+}
 
 
+if ($('.blog-home-slider').length > 0) {
+    $('.blog-home-slider').owlCarousel({
+        autoplay: true,
+        loop: true,
+        items: 1,
+        nav: true,
+        navText: ['<span class="fa fa-chevron-left"></span> <span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-right"></span><span class="fa fa-chevron-right"></span>'],
+        pagination: true,
+        paginationNumber: true,
+        dots: true,
+        dotsData: true
 
 
-
-
-
-
-});
+    });
+    $('.owl-dots').each(function () {
+        $(this).children('button').text($(this).index() + 1);
+    });
+}

@@ -1,0 +1,36 @@
+
+.lead{
+    padding: 218px 0 269px;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    
+    .lead-title{
+        font-size: 2rem;
+    }//lead-title
+} //lead
+
+
+@media(min-width:576px){
+    .lead{
+        .lead-title{
+            font-size: 3.5rem;
+        }
+    }
+} //media 576
+
+@media(min-width:768px){
+    .lead{
+        .lead-title{
+            font-size: 4.5rem;
+        }
+    }
+} //media 768
+
+@media(min-width:992px){
+    .lead{
+        .lead-title{
+            font-size: 6rem;
+        }
+    }
+} //media 992

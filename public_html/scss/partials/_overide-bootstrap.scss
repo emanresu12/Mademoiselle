@@ -1,13 +1,37 @@
-$black: #ccc;
+$font-size-base:  1.6rem;
 
 
-html{
-    font-size: 10px;
-}
-$font-size-base: 1.6rem;
 
-$body-color: #1e1e1e;
-$grid-gutter-width: 1.2rem;
+$gray-900:#1e1e1e;
+
+$primary:#ECD9D9;
+
+$link-color:$gray-900;
+
+$link-hover-decoration:none;
+
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .5),
+    2: ($spacer ),
+    3: ($spacer* 1.5),
+    4: ($spacer * 2),
+    5: ($spacer * 2.5),
+    6: ($spacer * 3),
+    7: ($spacer * 3.5),
+    8: ($spacer* 4),
+    9: ($spacer * 4.5),
+    10: ($spacer * 5)
+  ),
+  $spacers
+);
+
+$grid-gutter-width:14px;
 
 $grid-breakpoints: (
   xs: 0,
@@ -15,43 +39,21 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  //xxl: 1400px
+  xl: 1200px
 );
 
 $container-max-widths: (
   //sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  //xxl: 1320px
+  xl: 1140px
 );
 
-$spacer: 1rem !default;
-$spacers: (
-  0: 0,
-  1: $spacer / 2,
-  2: $spacer,
-  3: $spacer *1.5,
-  4: $spacer * 2,
-  5: $spacer * 2.5,
-  6: $spacer * 3,
-  7: $spacer *3.5,
-  8: $spacer * 4,
-  9: $spacer * 4.5,
-  10: $spacer * 5,
-  11: $spacer *5.5,
-  12: $spacer * 6,
-  13: $spacer * 6.5,
-  14: $spacer * 7,
-  15: $spacer *7.5,
-  16: $spacer * 8,
-  17: $spacer * 8.5,
-  18: $spacer * 9,
-  19: $spacer * 9.5,
-  20: $spacer * 10,
-);
 
-$navbar-light-color: #1e1e1e;            
-$navbar-light-hover-color: $black;
-$navbar-light-active-color: $black;
+$navbar-light-color: $gray-900;
+$navbar-light-hover-color: $primary;
+
+$form-group-margin-bottom:              2rem;
+
+
+

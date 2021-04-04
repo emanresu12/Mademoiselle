@@ -1,0 +1,121 @@
+$contact-title:$bodoni;
+
+.contact-section{
+
+    padding: 100px 0 110px;
+    .contact-form-item{
+        width: 500px;
+        max-width: 100%;
+        .contact-section-title{
+            font-family: $contact-title;
+            font-size: 3rem;
+            line-height: 4.5rem;
+            letter-spacing: 0.5rem;
+        }
+
+        .form-group{
+            .form-control{
+                border: none;
+                padding: 12px 0 11px 19px;
+                font-weight: 300;
+                background-color: rgba(#253D61, 0.03);
+                & textarea{
+                    padding:  12px 0 117px 19px;
+                }
+                &::placeholder{
+                    font-weight: 300;
+                    color: $gray-900;
+                    line-height: 2.5rem;
+                }
+            }
+            
+        }//form-group
+        
+        
+        .form-button{
+            .btn-secondary{
+                font-size: 1.4rem;
+                color: $gray-900;
+                background-color: transparent;
+            }
+        }
+    }//contact-form-item
+    
+    
+    .contact-map{
+        margin-top: 20px;
+        .map{
+        width: 450px;
+        max-width: 100%;
+        }
+    }
+}//contact-map
+
+
+@media(min-width:450px){
+    .contact-section{
+        .contact-map{
+        margin-top: 20px;
+        .map{
+        width: 800px;
+        max-width: 100%;
+        }
+    }
+    }
+    
+    
+}
+
+@media(min-width:992px){
+    .contact-section{
+        position: relative !important;
+        .contact-form-item{
+            width: 500px;
+        }
+        .contact-map{
+            margin-top: 0px;
+            width: 450px;
+            position: absolute;
+            top: 105px;
+            right: 0px;
+            max-width: 100%;
+        }
+
+    }
+}
+
+@media(min-width:1140px){
+    .contact-section{
+        position: relative !important;
+        .contact-form-item{
+            width: 500px;
+        }
+        .contact-map{
+
+            width: 480px;
+            position: absolute;
+            top: 105px;
+            right: 0px;
+
+        }
+
+    }
+}
+
+
+
+$company-text:#586C88;
+.contact-info{
+    padding: 6rem 0 ;
+    .company-address,
+    .company-email,
+    .company-phone{
+        *{
+            color: $gray-900;
+            text-decoration: none;
+           
+        }
+    }
+}
+
+

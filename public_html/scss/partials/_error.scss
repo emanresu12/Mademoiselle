@@ -1,0 +1,13 @@
+
+
+.lead-error-content{
+    .btn-secondary{
+        background-color: transparent;
+        border-color: white;
+        &:hover{
+            background-color:none; 
+            border-color: white;
+          
+        }
+    }
+}

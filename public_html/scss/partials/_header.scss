@@ -1,54 +1,76 @@
-$primary: #d4b4b6;
 
 
 header{
-    
-    .navbar-brand{
-        max-width: 270px;
-    }
-    .navbar-toggler{
-        border: none;
-        span{
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: $primary;
-            margin-bottom: 5px;
-            &:last-of-type{
-                margin-bottom: 0; 
-            }
-        }
-    }//navbar-toggler
-    
+    .navbar{
+        .navbar-brand{
+            max-width: 40%;
+            img{
+                height: 2.5rem;
+            } //img
+        } //navbar-brand
+        .navbar-toggler{
+            span{
+                width: 30px;
+                height: 3px;
+                background-color: $primary;
+                margin-bottom: 5px;
+                display: block;
+                border: none;
+                &:last-of-type{
+                    margin-bottom: 0px;
+                } //span-last of type
+            } //span
+        } //navbar-toogler
+
+    } //navbar
+
     .navbar-nav{
-        background-color: #fff;
-        
-        li{
-            @media(min-width:768px){
-                margin-left: 32px;
-                
-            }
-            
-            @media(min-width:992px){
-                margin-left: 52px;
-                
-            }
-            
-            @media(min-width:1200px){
-                margin-left: 72px;
-                
-            }
-        
-        
-        a{
-            text-align: center;
-            text-transform: uppercase;
+      
+        .nav-link{
             font-size: 1.4rem;
             line-height: 1.7rem;
-            font-weight: 400;
+            letter-spacing: 0.1rem;
             padding: 10px;
-        }
-        }//li
-    }//navbar-nav
-}//header
+            text-align: center;
+            text-transform: uppercase;
+           
+        } //nav-link
+    } //navbar-nav
+} //header
 
+@media(min-width:576px){
+    header{
+        .navbar{
+            .navbar-brand{
+                max-width: 30%;
+            } //navbar-brand
+        } //navbar
+        .navbar-nav{
+            .after{
+                border-bottom: 1px solid $primary;
+            } //after
+            .nav-item{
+                 margin-left: 1rem;
+            } //nav-item
+        } //navbar-nav
+     } //header
+} //media 576
+
+@media(min-width:768px){
+    header{
+        .navbar-nav{
+            .nav-item{
+                margin-left: 2.5rem;
+            }
+        }
+    }
+} //media 768
+@media(min-width:992px){
+    header{
+        .navbar-nav{
+            .nav-item{
+                margin-left: 7.2rem;
+            }
+        }//navbar-nav
+    }
+} //media 992

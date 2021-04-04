@@ -1,58 +1,78 @@
-
-$body-font:$lato;
-$headings-font: $bodoni;
-
+$default-font:$lato;
+$font-weight-regular:400;
+$bodoni:'Bodoni-Book';
 
 img{
     max-width: 100%;
 }
 
+html{
+    font-size: 10px; // 1 rem
+}
+
 body{
-    font-family: $body-font;
-    font-weight: 400;
-    line-height: 2.5rem;
+    font-family: $default-font;
+    font-weight: $font-weight-regular;
 }
 
 
-h1, h2, h3, h4, h5, h6{
-   font-family: $headings-font;
+p{
+    font-weight: $font-weight-light;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
 }
 
-.section-title{
+h1{
+    font-size: 6rem;
+    line-height: 8.4rem;
+    letter-spacing: 2rem;
+    font-family:$bodoni;
+    
+}
+h2, .h2{
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+.h3{
     font-size: 3rem;
+    line-height: 2.7rem;
+    font-family: $lato;
+    text-transform: uppercase;
+}
+
+h3{
+   font-size: 3rem;
     line-height: 4.5rem;
-    margin-bottom: 5.5rem;
-    
+    letter-spacing: 0.5rem; 
+    font-family: $bodoni;
+    text-transform: uppercase;
 }
 
-.section-title:after{
-    content:'';
-    color: 1px solid #ECD9D9;
-    
-}
-
-.image-placeholder{
-    position: relative;
-    overflow: hidden;
-}
-.image-placeholder:after{
-    content: '';
+    h3:after{
+    content: "";
+    width: 74px;
+    height: 1px;
+    background-color:$primary;
     display: block;
-    padding-top: 56.62%;
+    margin-top: 20px;
+    margin-bottom: 43px;
+   
 }
-.image-placeholder img{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.date{
+    font-family: $bodoni;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.1rem;
+    
 }
-
-.size-1by1:after{
-    padding-top: 100%;
-}
-
-.size-4by3:after{
-    padding-top: 75%;
-}
+  .first{
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+    .second{
+        font-size: 1.8rem;
+        line-height: 2.6rem;  
+    }

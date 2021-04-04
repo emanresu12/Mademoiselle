@@ -1,0 +1,98 @@
+$grid-gutter-blog-width:107px;
+.blog{
+    $grid-gutter-width:$grid-gutter-blog-width;
+
+}
+
+/*@media(min-width:768px){
+    .owl-theme{
+    .owl-dots{
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+    }
+    }
+}*/
+.single-blog-section{
+    padding: 65px 0 173px;
+    //padding: 165px 0 273px;
+    h6{
+        font-family: $bodoni;
+        font-size: 1.4rem;
+    }
+    .blog-help{
+        margin: 0 auto auto;
+
+    }
+    .row{
+        margin-bottom: 70px;
+    }
+
+    .blogg{
+        border-right: 1px solid $gray-900;
+        padding: 0 10px 0;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    .tags{
+        button{
+            font-family: $bodoni;
+            font-size: 1.6rem;
+            padding: 5px 20px;
+            margin-right: 15px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }//button
+    }//tags
+}//single-blog-section
+
+
+@media(min-width:576px){
+    .single-blog-section{
+        padding: 115px 0 203px;
+    }
+}
+
+@media(min-width:768px){
+    .single-blog-section{
+        padding: 165px 0 273px;
+    }
+}
+
+
+//OVDE JE KOD ZA PAGINACIJU ,SIGURNO NIJE DOBRO URADJENO,JA SAM U CONSOLE POMERAO I USPEO OVAKO DA NAMESTIM
+
+.blog-home-slider{
+    .owl-nav{
+        button.owl-prev,
+        button.owl-next{
+            padding: 0 60px !important;
+        }
+    }
+    .owl-dots{
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        max-width: 100%;
+        
+            .owl-dot{
+
+            span{
+                width: 0px;
+                height: 0px;
+                background-color: none;
+                margin-right: 20px;
+                font-size: 1.6rem;
+                font-family: $bodoni;
+
+            }
+        }
+    }
+
+
+}
+
+

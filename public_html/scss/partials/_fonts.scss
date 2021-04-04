@@ -1,21 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
 
-//
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+//font-family: 'Lato', sans-serif;
+
+$lato:'Lato', sans-serif;
+$bodoni:'Bodoni-Book';
+
 
 
 @font-face {
-    font-family: 'Bodoni-Book';
-    src: url('fonts/Desktop/Fonts/subset-Bodoni-Book.eot');
-    src: 
-        local('Bodoni-Book'),
-        url('fonts/Desktop/Fonts/subset-Bodoni-Book.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Desktop/Fonts/subset-Bodoni-Book.woff2') format('woff2'),
-        url('fonts/Desktop/Fonts/subset-Bodoni-Book.woff') format('woff'),
-        url('fonts/Desktop/Fonts/subset-Bodoni-Book.ttf') format('truetype'),
-        url('fonts/Desktop/Fonts/subset-Bodoni-Book.svg#Bodoni-Book') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swapf
+  font-family: 'Bodoni-Book';
+  src: url('fonts/BodoniSvtyTwoITCTT-Book(1)/BodoniSvtyTwoITCTT-Book.eot?#iefix') format('embedded-opentype'),
+      url('fonts/BodoniSvtyTwoITCTT-Book(1)/BodoniSvtyTwoITCTT-Book.woff') format('woff'),
+      url('fonts/BodoniSvtyTwoITCTT-Book(1)/BodoniSvtyTwoITCTT-Book.ttf')  format('truetype'),
+      url('fonts/BodoniSvtyTwoITCTT-Book(1)/BodoniSvtyTwoITCTT-Book.svg#BodoniSvtyTwoITCTT-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
