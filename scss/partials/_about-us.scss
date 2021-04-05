@@ -1,0 +1,89 @@
+//variables
+$about-us-title-font-family: $lato;
+
+
+.about-us{
+    padding: 70px 0;
+    .about-us-item-title{
+        font-family: $about-us-title-font-family;
+        font-size: 4.4rem;
+        letter-spacing: 0;
+        line-height: 5rem;
+        max-width: 300px;
+    }//.about-us-item-title
+
+    .about-us-item-photo{
+        margin-bottom: 3rem;
+    }//.about-us-item-photo
+    .search-group{
+        position: relative;
+        input{
+            display: block;
+            border: 1px solid #1e1e1e;
+            padding: 20px 22px 20px 25px;
+            font-size: 1.6rem;
+            font-style: oblique;
+            line-height: 2rem;
+            width: 100%;
+        }//input
+        img{
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            right: 6%;
+            bottom: 29%;
+        }//img
+    }//search group
+}//about us
+
+
+//Breakpoints
+//XM
+@media(min-width: 450px){
+
+
+}
+
+//SM
+@media(min-width: 576px){
+    .about-us{
+
+        .search-group{
+            img{
+                right: 6%;
+                bottom: 33%;
+            }  
+        }//search group
+    }//about us
+}
+
+
+
+//MD
+@media(min-width: 768px){
+
+    .about-us{
+
+        .about-us-item-photo{
+            margin-bottom: 5rem;
+        }//.about-us-item-photo
+    }//about us
+}
+
+
+//LG
+@media(min-width: 992px){
+    .about-us{
+        padding: 91px 0 78px;
+
+        .about-us-item-photo{
+            margin-bottom: 6.6rem;
+        }//.about-us-item-photo
+
+    }//.about-us
+}
+
+//XXL
+@media(min-width: 1500px){
+
+}

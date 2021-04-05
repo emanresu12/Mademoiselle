@@ -1,0 +1,73 @@
+//variables
+
+
+
+
+
+//lead section style
+
+.lead-section{
+    padding: 30px 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+
+//Breakpoints
+
+//XM
+@media(min-width: 450px){
+
+    .lead-section{
+        padding: 50px 0;
+    }
+}
+
+//SM
+@media(min-width: 576px){
+
+    .lead-section{
+        padding: 50px 0;
+    }
+}
+//MD
+@media(min-width: 768px){
+
+    .lead-section{
+        padding: 104px 0;
+    }
+}
+
+
+//LG
+@media(min-width: 992px){
+
+    .lead-section{
+        background-size: 100% auto;
+        padding: 113px 0;
+    }
+}
+
+//XL
+@media(min-width: 1200px){
+
+    .lead-section{
+        padding: 160px 0 200px;
+        background-size: cover;
+    }
+}
+
+//XXL
+@media(min-width: 1500px){
+
+    .lead-section{
+        padding: 218px 0 269px;
+
+        &.lead-services{
+            padding: 283px 0;
+        }
+    }
+}
+
