@@ -1,5 +1,9 @@
 //variables
 $about-us-title-font-family: $lato;
+$form-control-font: $bodoni;
+$form-placeholder-color: $primary;
+$btn-hover-color:$secondary;
+$form-span-color: $gray-900;
 
 
 .about-us{
@@ -10,31 +14,44 @@ $about-us-title-font-family: $lato;
         letter-spacing: 0;
         line-height: 5rem;
         max-width: 300px;
-    }//.about-us-item-title
+    }
 
-    .about-us-item-photo{
-        margin-bottom: 3rem;
-    }//.about-us-item-photo
-    .search-group{
+    .form-group{
         position: relative;
-        input{
-            display: block;
-            border: 1px solid #1e1e1e;
-            padding: 20px 22px 20px 25px;
-            font-size: 1.6rem;
-            font-style: oblique;
-            line-height: 2rem;
-            width: 100%;
-        }//input
-        img{
+        @media(min-width:320px){
+            padding-top: 7rem;
+        }
+        @media(min-width:768px){
+            padding-top: 0;
+        }
+        .form-control {
+            padding: 2rem;
+            font-size: 2rem;
+            font-family: $form-control-font;
+            
+
+            &::placeholder{
+                color: $form-control-font;
+                font-style: italic;
+            }
+            border: 1px solid #1E1E1E;
+            &:focus{
+                box-shadow: 0 0 0 0.3rem rgba($btn-hover-color, 0.25);
+            }
+        }
+        .form-control-feedback {
             position: absolute;
-            height: 16px;
-            width: 16px;
-            right: 6%;
-            bottom: 29%;
-        }//img
-    }//search group
+            z-index: 2;
+            color: $form-span-color;
+            font-size: 2rem;
+            right: 10px;
+            bottom: 10px;  
+
+
+        }
+    }
 }//about us
+
 
 
 //Breakpoints
